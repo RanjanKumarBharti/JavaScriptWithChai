@@ -66,7 +66,7 @@ span {
           </h2>
         </div>
 </body>
-<script>
+<!-- <script>
     const buttons = document.querySelectorAll('.button')
     const body = document.querySelector('body')
 
@@ -87,5 +87,25 @@ span {
               }
         })
     })
+</script> -->
+<script>
+  const buttons = document.querySelectorAll('.button');
+const body = document.querySelector('body');
+
+const validColors = ['grey', 'green', 'yellow', 'blue']; // List of valid colors
+
+buttons.forEach(function (button) {
+  button.addEventListener('click', function (e) {
+    let i = 0; // Initialize a counter for the loop
+    while (i < validColors.length) {
+      if (e.target.id === validColors[i]) {
+        body.style.backgroundColor = e.target.id;
+        break; // Exit the loop once a match is found
+      }
+      i++;
+    }
+  });
+});
+
 </script>
 </html>
