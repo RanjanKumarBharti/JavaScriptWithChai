@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background Changer</title>
+    <style>
+        button{
+            margin-top: 350px;
+            cursor: pointer;
+            height: 50px;
+            width: 160px;
+            font-size: 30px;
+            font-family: bold;
+            border-radius: 15px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <button id="btn">Change me</button>
+    </center>
+</body>
+<script>
+    const btn = document.querySelector("button");
+
+    function random(number){
+        return Math.floor(Math.random() * (number + 1));
+    }
+
+    // btn.addEventListener("click",()=>{
+    //     const randomColor = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+    //     document.body.style.backgroundColor = randomColor;
+    // })
+
+    function changeBackground(){
+        const randomColor = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+        document.body.style.backgroundColor = randomColor;
+    }
+
+    btn.addEventListener('click',changeBackground)
+</script>
+</html>
