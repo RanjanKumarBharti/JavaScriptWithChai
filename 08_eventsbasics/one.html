@@ -36,25 +36,25 @@
     //     console.log("Clicked on images")
     // },false)
     
-    // document.getElementById('owl').addEventListener('click',function(e){
-    //     console.log("Click on owl")
-    //     e.stopPropagation()
-    // },false)
+    document.getElementById('owl').addEventListener('click',function(e){
+        console.log("Click on owl")
+        e.stopPropagation()
+    },false)
     
-    // document.getElementById('google').addEventListener('click',function(e){
-    //     e.preventDefault()
-    //     e.stopPropagation()
-    //     console.log('clicked on google');
-    // })
-
-    document.getElementById('images').addEventListener('click', function(e){
-           console.log(e.target.tagName)
-           if(e.target.tagName === 'IMG'){
-            console.log(e.target.id)
-               const removeIt = e.target.parentNode
-               removeIt.remove()
-           }
+    document.getElementById('google').addEventListener('click',function(e){
+        e.preventDefault()
+        e.stopPropagation()
+        console.log('clicked on google');
     })
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //        console.log(e.target.tagName)
+    //        if(e.target.tagName === 'IMG'){
+    //         console.log(e.target.id)
+    //            const removeIt = e.target.parentNode
+    //            removeIt.remove()
+    //        }
+    // })
 
 </script>
 </html>
